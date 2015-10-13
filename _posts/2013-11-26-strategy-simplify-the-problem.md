@@ -30,7 +30,7 @@ so lets simplify the problem by assuming the input numbers are only zeroes and o
 
 The answer is pretty simple, a one will be added to the result only when a one is xor'd with a zero.
 
-So for the simple instance of the problem result will be **count ones** multiplied by **count zeroes ** i.e. **count ones \*(n-count ones)**
+So for the simple instance of the problem result will be **count ones** multiplied by **count zeroes** i.e. **count ones \*(n-count ones)**
 
 To extend this solution to solve the original problem we need one more thing, it's a special property in the XOR which is
 The ith bit in ***a*** xor ***b*** only depends on the ith bit in ***a*** and the ith bit in ***b***.
