@@ -1,19 +1,24 @@
 ---
 layout: page
-title: About Pixyll
+title: About
 permalink: /about/
 ---
 
-This Jekyll theme was crafted with <3 by [John Otander](http://johnotander.com)
-([@4lpine](https://twitter.com/4lpine)).
+### About Me
 
-Checkout the [Github repository](https://github.com/johnotander/pixyll) to download it,
-request a feature, report a bug, or contribute. It's free, and open source
-([MIT](http://opensource.org/licenses/MIT)).
+![Me]({{site.url}}/images/me.jpg){:width="250px"}
 
-Thanks to the following:
+My Name is Mahmoud Radwan, I am a Software Engineer at facebook, I love problem solving and programming competitions.
 
-* [BASSCSS](http://basscss.com)
-* [Jekyll](http://jekyllrb.com)
-* [Refills](http://refills.bourbon.io/)
-* [Type Scale](http://type-scale.com/)
+
+Find me on the following platforms
+
+* [Facebook](http://www.facebook.com/epicRado)
+* [Quora](http://www.quora.com/Mahmoud-Radwan)
+* [Codeforces](http://codeforces.com/profile/m.radwan)
+* [TopCoder](http://community.topcoder.com/tc?module=MemberProfile&cr=22917814)
+
+
+### About this blog
+
+This is my blog where I share things that I learned while solving problems, It should contain problem solving strategies, interesting problems and ideas and anything else that interests me in computer science.
