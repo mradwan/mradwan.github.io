@@ -14,7 +14,7 @@ If the problem was an optimization (minimization) problem we can rephrase this a
 
 > If there's a point in the whole search space that provides a solution with value v, then there is a point in the subset which provides a solution with value u≤v.
 
-Say we wanted to find maximum independent set in a graph with N nodes, there's $2^N$ subsets to try, however we can reduce the search space by knowing that a maximum independent set is also maximal, which means that we can't add any more nodes to this set, so we don't have to try all possible subsets we can only try maximal subsets.
+Say we wanted to find maximum independent set in a graph with N nodes, there's $$2^N$$ subsets to try, however we can reduce the search space by knowing that a maximum independent set is also maximal, which means that we can't add any more nodes to this set, so we don't have to try all possible subsets we can only try maximal subsets.
 
 For example lets say we have N intervals [Li, Ri] and we wanted to know if they intersect, there's a smart way to do this but lets say we decided to iterate over all points of the search space [min(Li), max(Ri)] and check whether there's a point that is inside all intervals or not!
 
@@ -36,9 +36,9 @@ Now we are ready to explore more problems
 **[TheTower](http://community.topcoder.com/stat?c=problem_statement&pm=9976) [Topcoder SRM 423]**
 
 Lets start by first simplify the problem into the following problem, Given N checkers find the minimum number of moves to get them all in one cell.
-We need to find a point (u, v) such that $\sum |x[i]-u| + |y[i]-v|$ is minimized.
+We need to find a point (u, v) such that $$\sum \lvert x[i]-u\rvert + \lvert y[i]-v\rvert $$ is minimized.
 
-We can rewrite this as $\sum |x[i]-u| + \sum |y[i]-v|$ which means that we can solve for x, and for y independently because the contribution to the result from x only depends on the value of u, and from y only depends on v.
+We can rewrite this as $$\sum \lvert x[i]-u\rvert + \sum \lvert y[i]-v\rvert$$ which means that we can solve for x, and for y independently because the contribution to the result from x only depends on the value of u, and from y only depends on v.
 
 Now the problem got even simpler we're in 1D, so lets take a look at an example
 
@@ -71,7 +71,7 @@ So it's sufficient to try for each i all x's, y's of the original points and pic
 
 We know that the required buttons to switch must satisfy that each outlet after being switched will be equal to some device, and each device will have an outlet that is equal to it.
 
-So instead of going through the $2^L$ button switches, we choose one device (say the first device), and select some outlet for this device then we find the buttons we need to switch in order to make the outlet equal the device, if such a button switch satisfies the requirements for all other outlets and devices then it's a candidate solution, thus we only need check N button switches and select the one that gives minimum number of switches.
+So instead of going through the $$$2^L$$$2^$) button switches, we choose one device (say the first device), and select some outlet for this device then we find the buttons we need to switch in order to make the outlet equal the device, if such a button switch satisfies the requirements for all other outlets and devices then it's a candidate solution, thus we only need check N button switches and select the one that gives minimum number of switches.
 
 ---
 

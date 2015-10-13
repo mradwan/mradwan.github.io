@@ -40,6 +40,7 @@ With little examination we can observe the following
 Now from the third property how do we get the solution set of minimum size?
 Choose the longest suffix of the target string which is also a subsequence of the start string, remove it from the start string then the rest is the solution!
 
+---
 **[MysticAndCandies](http://community.topcoder.com/stat?c=problem_statement&pm=12997) [Topcoder SRM 608]**
 Let n be the number of boxes, A be the set of all boxes, let S be a solution then it must satisfy the following
 
@@ -55,6 +56,8 @@ If we can't move candy from S to other boxes, either of these must be true
 
 The answer then is either the minimum number of boxes that holds least X candy pieces, or n - maximum number of boxes that can hold at most C-X candy pieces.
 We can calculate both greedily and choose the smaller.
+
+---
 
 **[TaroFriends](http://community.topcoder.com/stat?c=problem_statement&pm=12997) [TopCoder SRM 613]**
 
