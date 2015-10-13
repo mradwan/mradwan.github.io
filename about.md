@@ -8,7 +8,7 @@ permalink: /about/
 
 ![Me]({{site.url}}/images/me.jpg){:width="250px"}
 
-My Name is Mahmoud Radwan, I am a Software Engineer at facebook, I love problem solving and programming competitions.
+My Name is Mahmoud Radwan, I am a Software Engineer , I love problem solving and programming competitions.
 
 
 Find me on the following platforms
