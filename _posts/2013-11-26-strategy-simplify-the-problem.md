@@ -2,7 +2,7 @@
 layout:     post
 title:      Strategy simplify the problem
 date:       2013-11-26
-categories: problemsolving strategy
+categories: strategy
 ---
 This one is a very useful strategy and should always be applied while trying to approach a specific problem, however it might or might not work!
 
