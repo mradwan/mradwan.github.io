@@ -2,7 +2,7 @@
 layout:     post
 title:      Strategy Focus on the solution
 date:       2013-11-26
-categories: jekyll pixyll
+categories: problemsolving strategy
 ---
 
 Focus on the solution involves looking at the problem solution and searching to see whether it has some specific properties that can help us in finding it, those little properties can make the solution much easier.

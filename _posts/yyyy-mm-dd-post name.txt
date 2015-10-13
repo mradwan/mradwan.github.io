@@ -1,0 +1,7 @@
+---
+layout:     post
+title:      post name
+date:       2013-11-26
+categories: jekyll pixyll
+---
+post content
