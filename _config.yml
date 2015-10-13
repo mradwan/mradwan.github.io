@@ -4,7 +4,7 @@ email:       mahmoud.radwan92@gmail.com
 author:      Mahmoud R. Eariby
 description: "A Blog where I discuss interesting problems and problem solving techniques in computer science"
 baseurl:     ""
-url:         "http://127.0.0.1:4000/"
+url:         "http://mradwan.github.io/"
 date_format: "%b %-d, %Y"
 
 # Google services
