@@ -64,13 +64,13 @@ Looking for differences or special properties we can see a line saying
 this means that the given graph is a [Tournament](https://en.wikipedia.org/wiki/Tournament_\(graph_theory\)), such a graph has some properties as
 
 1. Any subset of nodes also forms a tournament.
-2. In a tournament of size N, there exists a node that covers at least $$$\lceil N/2 \rceil$$$ nodes.
+2. In a tournament of size N, there exists a node that covers at least $$\lceil N/2 \rceil$$ nodes.
 
 From the above properties we can say that a greedy algorithm that keeps choosing the node that covers most uncovered nodes for a graph with 75 nodes we'll need at most 6 nodes.
 
 We can now use a brute force algorithm to find a cover of size 1, if none found then try 2, we should do this up to 5, if still none found we should use the greedy algorithm then.
 
-**Exercise**: try to prove property 2, hint: number of edges in a tournament of size N is $$${N\choose 2}$$$.
+**Exercise**: try to prove property 2, hint: number of edges in a tournament of size N is $${N\choose 2}$$.
 
 ---
 
