@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Strategy Hard problem
-date:       2013-11-26
+date:       2014-01-31
 categories: strategy
 ---
 
@@ -78,13 +78,13 @@ We can now use a brute force algorithm to find a cover of size 1, if none found 
 
 The problem is asking us to partition the graph into 3 cliques, such that *Winterfell (call this A)* in one clique, *King's Landing (call this B)* in another clique, and the rest of the graph is a clique.
 
-![coloredgraph](../images/hard-problem/img_1.jpg)
+![coloredgraph]({{site.url}}/images/hard-problem/img_1.jpg)
 
 After drawing some random kingdom and solving, seeing cliques should give a little intuition that such a partition is hard, but that's not enough to say that it's hard.
 
 One thing to try is to take a look at the complement of the graph.
 
-![coloredgraph](../images/hard-problem/img_2.jpg)
+![coloredgraph]({{site.url}}/images/hard-problem/img_2.jpg)
 
 It seems like the problem here is asking for a 3-coloring for the complement of the graph which should make us sure that the problem is hard.
 

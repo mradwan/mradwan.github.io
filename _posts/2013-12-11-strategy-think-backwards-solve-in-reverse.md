@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Strategy Think backwards think in reverse!
-date:       2013-11-26
+date:       2013-12-11
 categories: strategy
 ---
 Many problems are easier when solved backwards, or maybe impossible to solve if attacked in the straight forward way.
