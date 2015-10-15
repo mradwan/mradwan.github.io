@@ -47,7 +47,8 @@ Direct brute force is $$O(n^8)$$ which is too much for n≤30, however if we wor
 As one final example we take a look at a famous algorithm that uses meet in the middle
 
 ---
-####Log mod
+
+#### Log mod
 Given a, b and a prime p find smallest x satisfying $$a^x \equiv b\pmod p$$
 One thing to do is to try all possible x from 0 to p-1, and choose the first x that satisfies the equation, that's O(p) time and O(1) memory but can we do better ?
 Yes, let's first define q, where $$q = \lceil \sqrt{p} \rceil
