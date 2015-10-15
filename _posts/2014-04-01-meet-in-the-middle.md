@@ -28,7 +28,7 @@ We have an unweighted directed graph with *N* nodes, we want to know if there's 
 
 We walk K/2 edges forward from P and mark all nodes we visited, and walk K/2 edges backward from Q and mark all nodes we visited, There is a path of length < K iff there's a node marked when moving forward from P and when moving backwards from Q, it's as if having someone at P walk half the distance and someone at Q walk half the distance so that they meet in the middle.
 
-![graph](../images/meet-in-the-middle/img_1.png)
+![graph]({{site.url}}/images/meet-in-the-middle/img_1.png)
 
 
 We can apply this to any graph problem as long as we know the start and destination, here's an example problem
@@ -66,7 +66,7 @@ Take a look here Baby-step giant-step for a more general definition of the probl
 
 We originally viewed the search space as a line, and then we viewed it as a grid and noticed that if know which row the solution is, we can find the column quickly, it's also good to note that we sacrificed some memory in exchange for time.
 
-![searchspace](../images/meet-in-the-middle/img_2.jpg)
+![searchspace]({{site.url}}/images/meet-in-the-middle/img_2.jpg)
 
 ####Additional problems
 * [General Bytor](http://codeforces.com/gym/100096/attachments)
