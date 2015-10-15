@@ -14,7 +14,7 @@ A typical example would be calculating the greatest common divisor gcd for n int
 
 Lets solve some problems using this strategy
 
-**X3[COCI] Find it [here](http://www.hsin.hr/2012/coci/contest1_tasks.pdf)**
+####X3[COCI] Find it [here](http://www.hsin.hr/2012/coci/contest1_tasks.pdf)
 Given n integers find out the sum of their pairwise XOR
 
 ~~~

@@ -34,7 +34,7 @@ But what if the problem **looked like** a hard problem, but there was a **little
 Lets solve some problems that look like hard problems
 
 
-**Subset sum**
+####Subset sum
 
 Given an array A of numbers  where each number is a power of two, determine if we can choose a subset of these numbers such that their sum is equal to a number X.
  
@@ -53,7 +53,7 @@ The answer is **Yes**, if we end up with X = 0.
 
 ---
 
-**[Infiltrate](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&category=547&page=show_problem&problem=4041)[ICPC WF 2012]**
+####[Infiltrate](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&category=547&page=show_problem&problem=4041)[ICPC WF 2012]
 
 This problem looks a lot like a min set cover problem, or a dominating set problem.
 
@@ -74,7 +74,7 @@ We can now use a brute force algorithm to find a cover of size 1, if none found 
 
 ---
 
-**[Seven kingdoms](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&category=623&page=show_problem&problem=4456) [ICPC Regionals NA-Rocky Mountain 2013]**
+####[Seven kingdoms](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&category=623&page=show_problem&problem=4456) [ICPC Regionals NA-Rocky Mountain 2013]
 
 The problem is asking us to partition the graph into 3 cliques, such that *Winterfell (call this A)* in one clique, *King's Landing (call this B)* in another clique, and the rest of the graph is a clique.
 
@@ -113,7 +113,7 @@ This indicates that we can use [2-SAT](http://en.wikipedia.org/wiki/2-satisfiabi
 In the previous cases, most problems had something special that made it easier, however there are other problems which are hard, i.e there's nothing special in the problem to make it easy, this is where you should think about a brute force solution, or exponential dynamic programming.
 
 ---
-**Additional problems**
+####Additional problems
 
 * [Easy Finding](http://poj.org/problem?id=3740)
 * [A Gentlemen's Agreement](https://uva.onlinejudge.org/external/110/p11065.pdf)

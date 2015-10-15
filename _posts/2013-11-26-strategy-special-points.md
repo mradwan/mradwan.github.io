@@ -33,7 +33,7 @@ Of course there's a faster solution for this problem, but this is just an illust
 Now we are ready to explore more problems
 
 ---
-**[TheTower](http://community.topcoder.com/stat?c=problem_statement&pm=9976) [Topcoder SRM 423]**
+####[TheTower](http://community.topcoder.com/stat?c=problem_statement&pm=9976) [Topcoder SRM 423]
 
 Lets start by first simplify the problem into the following problem, Given N checkers find the minimum number of moves to get them all in one cell.
 We need to find a point (u, v) such that $$\sum \lvert x[i]-u\rvert + \lvert y[i]-v\rvert $$ is minimized.
@@ -67,7 +67,7 @@ So it's sufficient to try for each i all x's, y's of the original points and pic
 
 ---
 
-**[Charging Chaos](https://code.google.com/codejam/contest/2984486/dashboard#s=p0) [Google Code Jam Round 1A 2014]**
+####[Charging Chaos](https://code.google.com/codejam/contest/2984486/dashboard#s=p0) [Google Code Jam Round 1A 2014]
 
 We know that the required buttons to switch must satisfy that each outlet after being switched will be equal to some device, and each device will have an outlet that is equal to it.
 
@@ -75,7 +75,7 @@ So instead of going through the $$$2^L$$$2^$) button switches, we choose one dev
 
 ---
 
-**Additional problems**
+####Additional problems
 
 * [Segments](http://acm.tju.edu.cn/toj/showp2630.html)
 * [Trash Removal](https://uva.onlinejudge.org/external/11/p1111.pdf)

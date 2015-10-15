@@ -9,7 +9,7 @@ Focus on the solution involves looking at the problem solution and searching to 
 
 Lets solve some problems using this strategy
 
-**[LittleElephatAndString](http://community.topcoder.com/stat?c=problem_statement&pm=12854) [Topcoder SRM 597]**
+####[LittleElephatAndString](http://community.topcoder.com/stat?c=problem_statement&pm=12854) [Topcoder SRM 597]
 
 First let's define what is the solution ? is it the minimum number of characters ? No! that would make our task harder.
 
@@ -41,7 +41,7 @@ Now from the third property how do we get the solution set of minimum size?
 Choose the longest suffix of the target string which is also a subsequence of the start string, remove it from the start string then the rest is the solution!
 
 ---
-**[MysticAndCandies](http://community.topcoder.com/stat?c=problem_statement&pm=12997) [Topcoder SRM 608]**
+####[MysticAndCandies](http://community.topcoder.com/stat?c=problem_statement&pm=12997) [Topcoder SRM 608]
 Let n be the number of boxes, A be the set of all boxes, let S be a solution then it must satisfy the following
 
 * Sum of candy in S ≥ X.
@@ -59,10 +59,10 @@ We can calculate both greedily and choose the smaller.
 
 ---
 
-**[TaroFriends](http://community.topcoder.com/stat?c=problem_statement&pm=12997) [TopCoder SRM 613]**
+####[TaroFriends](http://community.topcoder.com/stat?c=problem_statement&pm=12997) [TopCoder SRM 613]
 
 A valid solution here can be described by the left most, and the right most cat, each of those has either moved to the left or to the right by X, while all other cats have to be in between those, since N is small here we can try out all solutions and choose the valid solution which gives minimum difference between left most and right most cat.
 
-**TAKE CARE!**
+#####TAKE CARE!
 
 Usually trying out test cases might show you some properties, it might be misleading sometimes and it might not show you all the properties, so try working out your properties in a more generic way.

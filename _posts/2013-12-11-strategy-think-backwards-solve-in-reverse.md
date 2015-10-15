@@ -8,7 +8,7 @@ Many problems are easier when solved backwards, or maybe impossible to solve if 
 
 Solving a problem backwards may involve attacking the problem from a different point, thinking about the last step first or starting with the result and try to reach the initial state.
 
-**[9 Puzzle](http://uva.onlinejudge.org/external/115/11513.html)**
+####[9 Puzzle](http://uva.onlinejudge.org/external/115/11513.html)
 
 We can model the game as a directed graph, where each node is a state of the game, an upper bound on the number of reachable states in each query is indeed 9!, however 9! for each test case is not really nice.
 
@@ -20,7 +20,7 @@ Now after (doing) this pre-calculation we can answer each query in O(1).
 
 ---
 
-**[CasketOfStar](http://community.topcoder.com/stat?c=problem_statement&pm=11781) [Topcoder SRM 533]**
+####[CasketOfStar](http://community.topcoder.com/stat?c=problem_statement&pm=11781) [Topcoder SRM 533]
 
 
 Trying to attack this problem in the usual manner will lead us no where but the (N-2)! where N is the number of stars.
@@ -55,7 +55,7 @@ so for each l, r we pick we want the star that which if removed last would maxim
 
 ---
 
-**Counting Arborescence in a DAG**
+####Counting Arborescence in a DAG
 
 According to wikipedia, an [**arborescence**](https://en.wikipedia.org/wiki/Arborescence_(graph_theory\)) is a directed graph in which, for a vertex u called the root and any other vertex v, there is exactly one directed path from u to v.
 
@@ -76,7 +76,7 @@ To calculate the result for any DAG we can just multiply the in degrees of each 
 Note that for this to work the root must exist, i.e the graph must have only a single node with zero in degree.
 
 ---
-**[TreesCount](http://community.topcoder.com/stat?c=problem_statement&pm=10805)[Topcoder SRM 474]**
+####[TreesCount](http://community.topcoder.com/stat?c=problem_statement&pm=10805)[Topcoder SRM 474]
 
 This problem isn't really much harder than the previous one, lets first **discard** all edges that will always be removed, these are the edges that are **NOT** on any shortest path from node 0 to any other node, and **keep** only the edges that lie on some shortest path from node 0 to some other node.
 
@@ -91,9 +91,8 @@ These edges alone form a DAG, Why? because the shortest path is always acyclic i
 So now the problem reduces to counting arborescence in that shortest path DAG which we know how to solve.
 
 ---
-**Additional problems**
-
-[Anansi's Cobweb](http://acm.timus.ru/problem.aspx?num=1671)
+####Additional problems
+* [Anansi's Cobweb](http://acm.timus.ru/problem.aspx?num=1671)
 
 
 
