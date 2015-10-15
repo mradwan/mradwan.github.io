@@ -39,7 +39,7 @@ Number of reachable states is less than or equal 4^20 which is too much, however
 
 ---
 
-####DNA Analysis-2007[Summer-2007 Petrozavodsk Camp]
+####[DNA Analysis-2007](http://codeforces.com/gym/100324/attachments)[Summer-2007 Petrozavodsk Camp]
 Given two strings determine if we can transfer the first to the second using at most four operations, an operation is defined as choosing a contagious subsequence and reversing it.
 
 Direct brute force is $$O(n^8)$$ which is too much for n≤30, however if we work on both strings and meet in the middle we can obtain $$O(n^4)$$, this is not really different from the graph problem we can view strings as nodes in the graph anyways.
