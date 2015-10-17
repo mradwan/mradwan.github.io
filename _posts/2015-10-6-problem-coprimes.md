@@ -5,7 +5,7 @@ date:       2015-10-16
 categories: problem
 ---
 
-#### Coprimes [ACM ICPC Regionals 2014 - Asia Anshan]
+#### [Coprimes](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=5060) [ACM ICPC Regionals 2014 - Asia Anshan]
 Given a sequence ***a*** of n integers ($$n ≤ 10^5$$) where ($$a_i ≤ 10^5$$), find the number of triplets (x, y, z) such that they are either pairwise coprime, or pairwise not coprime, feel free to check the problem statement for more explanation.
 
 The problem was very interesting it combined various topics from combinatorics and number theory, first lets imagine each triplet as a triangle where the gcd of each pair of numbers is written on the side connecting them.
