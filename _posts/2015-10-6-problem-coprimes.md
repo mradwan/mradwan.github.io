@@ -109,7 +109,7 @@ for(int i = 2;i<MAXN;i++)
 
 After this precalculation we can calculate $$ \lvert x : x \in a \setminus k, gcd(x, k) ≠ 1\rvert $$ in O(1) time and thus solve the problem.
 
-**Note** this problem might have an easier solution however I was interested in this solution more because it's the first time for me to use a system of linear equation in order to count using elimination
+**Note** this problem might have an easier solution however I was interested in this solution more because it's the first time for me to use a system of linear equation in order to count something, this solution also let's you count whatever type you want.
 
 
 #### Additional resources
