@@ -8,11 +8,11 @@ categories: problem
 #### [Coprimes](https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=5060) [ACM ICPC Regionals 2014 - Asia Anshan]
 Given a sequence ***a*** of n integers ($$n ≤ 10^5$$) where ($$a_i ≤ 10^5$$), find the number of triplets (x, y, z) such that they are either pairwise coprime, or pairwise not coprime, feel free to check the problem statement for more explanation.
 
-The problem was very interesting it combined various topics from combinatorics and number theory, first lets imagine each triplet as a triangle where the gcd of each pair of numbers is written on the side connecting them.
+This problem was very interesting it combined various topics from combinatorics and number theory, first lets imagine each triplet as a triangle where the gcd of each pair of numbers is written on the side connecting them.
 
 ![triangle]({{site.url}}/images/coprimes/img_1.png)
 
-this seems like a lot of details, let's just write 1 if the gcd is equal to 1, ≠1 otherwise, after doing this we would have four types of different triangles.
+this seems like a lot of details, let's just write 1 if the gcd is equal to 1, ≠1 otherwise, after doing this we would have four different types triangles.
 
 ![triangle_types]({{site.url}}/images/coprimes/img_2.png)
 
@@ -29,7 +29,7 @@ Assume for now that we could calculate the cardinalities of those sets in a fast
 
 $$ \sum f(a_i) = count(B) + 2 * count(C) = k_1$$
 
-Not really what we expected :-(, but why ? because type C is symmetric so when we're calculating f($$a_i$$) and we placed $$ a_i $$ at Y, $$ a_j $$ at Z, $$a_k$$ at X, we'll go through the same triangle again while calculating f($$a_j$$) and placing $$ a_j $$ at Y, $$ a_i $$ at Z, $$a_k$$ at X, not exactly what we expected.
+Not really what we expecte, but why ? because type C is symmetric so when we're calculating f($$a_i$$) and we placed $$ a_i $$ at Y, $$ a_j $$ at Z, $$a_k$$ at X, we'll go through the same triangle again while calculating f($$a_j$$) and placing $$ a_j $$ at Y, $$ a_i $$ at Z, $$a_k$$ at X, :-(.
 
 However looking at what we got again
 
@@ -37,9 +37,9 @@ $$ count(A) + count(B) + count(C) + count(D) = k_0 $$
 
 $$ count(B) + 2 * count(C) = k_1 $$
 
-We have two equations in four unknowns, if only we had two more equations we could try solving the system of linear equations and calculate whatever we want.
+We have two equations in four unknowns, if only we had two more equations we could try solving the system of linear equations and calculate whatever we want!.
 
-Playing in f seeking newer equations, let's define g as
+Playing in f a bit, hoping for newer equations, let's define g as
 
 $$ g(k) =\lvert x : x \in a \setminus k, gcd(x, k) = 1\rvert * \lvert x : x \in a \setminus k, gcd(x, k) = 1\rvert $$
 
@@ -55,17 +55,18 @@ $$ \sum h(a_i) = count(C) + 3 * count(D) = k_3$$
 
 We then have 
 $$ (k_3 + k_2 - k_0) = 2 * count(A) + 2 * count(D) $$
-which is twice the value we wanted to calculate, we could also calculate the count of each type individiually if we wish.
+
+which is twice the value we wanted to calculate, We could also calculate the count of each type individiually if we wish by solving these equations using gaussian elimination.
 
 Now back to the part that we skipped which is how to calculate the cardinality of the sets we mentioned quickly.
-We fist have
+
+We first have
+
 $$ \lvert x : x \in a \setminus k, gcd(x, k) ≠ 1\rvert  = n - 1 - \lvert x : x \in a \setminus k, gcd(x, k) = 1\rvert $$
 
 so it's sufficient to calculate only one of them, let's rewrite k as
 
 $$ k = {p_0}^{a_0} * {p_1}^{a_1} * … * {p_r}^{a_r}$$
-
-
 
 to calculate  $$ \lvert x : x \in a \setminus k, gcd(x, k) ≠ 1 \rvert$$ , we need to calculate 
 
