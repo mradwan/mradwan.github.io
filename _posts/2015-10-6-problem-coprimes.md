@@ -39,7 +39,7 @@ $$ count(B) + 2 * count(C) = k_1 $$
 
 We have two equations in four unknowns, if only we had two more equations we could try solving the system of linear equations and calculate whatever we want.
 
-Playing in f seeking a newer equations, let's define g as
+Playing in f seeking newer equations, let's define g as
 
 $$ g(k) =\lvert x : x \in a \setminus k, gcd(x, k) = 1\rvert * \lvert x : x \in a \setminus k, gcd(x, k) = 1\rvert $$
 
