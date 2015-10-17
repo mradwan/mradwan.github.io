@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Meet in the middle
-date:       2015-04-01
+date:       2014-04-01
 categories: technique
 ---
 Meet in the middle is a search technique used when the input size is small but not small enough to use direct brute force.
