@@ -24,7 +24,7 @@ First we construct a graph called Implication graph using the given clauses and 
 
 The edges are constructed from implications, If we know that $$(A \lor B)$$ must be true then we know that if A is false B must be true, if B is false then A must be true, this can be written as $$(\lnot A \implies B) \wedge (\lnot B \implies A)$$ thus we connect an edge from ¬A to B and an edge from ¬B to A, we do this for every clause we have.
 
-![graph-construction](../images/sat/img_1.png)
+![graph-construction]({{site.url}}/images/sat/img_1.png)
 
 By construction the graph has a special property if we take any edge and reverse it's direction, complement it's nodes the resulting edge will also exist in the graph.
 
@@ -37,7 +37,7 @@ Now what does it mean to have A and ¬A in a cycle ? It means $$(A \implies \lno
 
 If there's no such a cycle, we can always find a satisfying assignment easily, first lets compress strongly connected components into a single node, we are left with a directed acyclic graph then, a satisfying assignment can be seen as a coloring for that graph where if node A is colored then A must be true, if node ¬A is colored, then A must be false. In such a coloring exactly one of {A, ¬A} must be colored, and if there's a path between two nodes X and Y and X is colored, then Y also must be colored (by implication), If we can find such a coloring then we're done.
 
-![graph-construction](../images/sat/img_2.png)
+![graph-construction]({{site.url}}/images/sat/img_2.png)
 
 We can find such a coloring easily, by doing a topological sort on the graph and start coloring nodes in reverse topological order, if the complement of a node is colored, then we don't color it.
 
@@ -74,11 +74,11 @@ We construct a graph where the nodes are the variables, and the edges are the cl
 
 If this graph is bipartite then our formula is satisfiable, since we could color the nodes in two colors  (true, false) where edges lie between nodes of different colors (each clause contains one true and one false).
 
-![graph-construction](../images/sat/img_3.png)
+![graph-construction]({{site.url}}/images/sat/img_3.png)
 
 We can also count the number of assignments, we know for each connected component we can either set the left nodes to true, right nodes to false or vice versa, thus the number of assignments is $$ 2^{cc}$$  where cc is the number of connected components.
 
-![graph-construction](../images/sat/img_4.png)
+![graph-construction]({{site.url}}/images/sat/img_4.png)
 
 
 Now back to the **general XOR sat** problem, we want each clause to have an odd number of trues.
@@ -118,14 +118,14 @@ $$ x_1 [a_{11} ... a_{n1}]^\top + ... + x_n [a_{1n} ... a_{nn}]^\top = [b_1  ...
 
 Here each $$ x_i$$  is a scale for some vector from the available column vectors, we are required to select a scale for each vector such that their addition becomes some point in the space $$ (b_1, b_2, ..., b_n)$$ .
 
-![graph-construction](../images/sat/img_5.png)
+![graph-construction]({{site.url}}/images/sat/img_5.png)
 
 
 We can also view each of the available column vectors as a degree of freedom, or a direction we can move in.
 
 For example if we were in 3D space, and we had two vectors $$ v_1 = [0, 0, 1]^\top$$ ,  $$ v_2 = [0, 1, 0]^\top$$ , if we multiply those vectors by any factors and add them up we would still be moving in a 2D plane.
 
-![graph-construction](../images/sat/img_6.png)
+![graph-construction]({{site.url}}/images/sat/img_6.png)
 
 
 If we add a new vector $$ v_3 = [1, 0, 0]^\top$$ , we would be able to span the whole space.
