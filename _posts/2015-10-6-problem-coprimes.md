@@ -80,7 +80,7 @@ We calculate this using [inclusion exclusion principle](https://en.wikipedia.org
 
 $$ \lvert \cup_{0≤i≤r} M_{p_i}\rvert = \lvert M_{p_0}\rvert + \lvert M_{p_1}\rvert + … - \lvert M_{p_0 * p_1}\rvert - \lvert M_{p_1 * p_2}\rvert - … + \lvert M_{p_0 * p_1 * p_2}\rvert + …$$
 
-Notice here that we replaced the intersection by multiplication, we find that each number which have an odd number of primes is added into the result, and each number that has an even number of primes is subtracted from the result, and we never used numbers which have a repeated prime.
+Notice here that we replaced the intersection by multiplication because a number that is divisible by both p and q has to be divisible by p*q, we find that each number which have an odd number of primes is added into the result, and each number that has an even number of primes is subtracted from the result, and we never used numbers which have a repeated prime.
 
 This weight function we used is called [Möbius function](https://en.wikipedia.org/wiki/M%C3%B6bius_function) μ(n), and it has other applications, it's defined as
 
