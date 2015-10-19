@@ -71,7 +71,6 @@ This weight function we used is called [Möbius function](https://en.wikipedia.o
 
 To implement this, we find that we have to iterate over the divisors of a number this is best done inversly, where each number goes to it's multiples.
 
-
 ~~~
 int freq[MAXN]; // freq[i]:count of times i occurs in the input 
 int multiplesOf[MAXN]; // multiplesOf[i]:count of numbers divisible by i
