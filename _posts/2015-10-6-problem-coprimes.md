@@ -39,24 +39,6 @@ $$ 2 * count(B) + 2 * count(C) = k_1 $$
 
 This makes the answer to the problem $$k_0 - k_1/2$$.
 
-But let's say we wanted to recover the count of each type on it's own, not their sum, We have two equations in four unknowns, if only we had two more equations we could try solving the system of linear equations and calculate whatever we want!.
-
-Playing in f a bit, hoping for newer equations, let's define g as
-
-$$ g(k) =\lvert x : x \in a \setminus k, gcd(x, k) = 1\rvert * \lvert x : x \in a \setminus k, gcd(x, k) = 1\rvert $$
-
-$$ \sum g(a_i) = 3 * count(A) + count(B) = k_2$$
-
-You should be able to deduce why just by looking at the triangle types figure.
-
-Define h as
-
-$$ h(k) =\lvert x : x \in a \setminus k, gcd(x, k) ≠ 1\rvert * \lvert x : x \in a \setminus k, gcd(x, k) ≠ 1\rvert $$
-
-$$ \sum h(a_i) = count(C) + 3 * count(D) = k_3$$
-
-We could calculate the count of each type individiually if we wish by solving these equations using gaussian elimination.
-
 Now back to the part that we skipped which is how to calculate the cardinality of the sets we mentioned quickly.
 
 We first have
@@ -108,8 +90,6 @@ for(int i = 2;i<MAXN;i++)
 ~~~ 
 
 After this precalculation we can calculate $$ \lvert x : x \in a \setminus k, gcd(x, k) ≠ 1\rvert $$ in O(1) time and thus solve the problem.
-
-**Note** this problem might have an easier solution however I was interested in this solution more because it's the first time for me to use a system of linear equation in order to count something, this solution also let's you count whatever type you want.
 
 
 #### Additional resources
