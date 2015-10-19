@@ -86,7 +86,8 @@ We can use **any** single source shortest path algorithm to solve this problem w
 
 Here's one last example that is harder than the previous ones, this problem actually encouraged me to write this whole post
 
-#### [Riddle](http://main.edu.pl/en/archive/pa/2010/zag) [Algorithmic Engagements 2010]
+// TO BE CONTINUED
+<!--#### [Riddle](http://main.edu.pl/en/archive/pa/2010/zag) [Algorithmic Engagements 2010]
 
 We have a graph, with *n* nodes and *m* and *k* groups of nodes, we want to choose a single node from each group and color it, such that each edge has at least one of it's end points colored.
 
@@ -193,4 +194,4 @@ Now we've exchanged the *Exactly one from* clause to 5 normal 2-SAT clauses, whi
 
 I've learned about the solution to this problem from [Looking for a Challenge book](http://www.lookingforachallengethebook.com/), however my solution is a little bit different.
 
-This example shows the beauty of solving problems in the higher level where we speak in terms of problems and reductions from one problem to another, not in terms of algorithms or code.
+This example shows the beauty of solving problems in the higher level where we speak in terms of problems and reductions from one problem to another, not in terms of algorithms or code.-->
