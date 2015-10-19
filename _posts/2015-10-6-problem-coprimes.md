@@ -27,17 +27,19 @@ $$ f(k) =\lvert x : x \in a \setminus k, gcd(x, k) ≠ 1\rvert * \lvert x : x \i
 
 Assume for now that we could calculate the cardinalities of those sets in a fast way, we'll come back to this later, now if we sum f for all the numbers in the sequence what do we get ?
 
-$$ \sum f(a_i) = count(B) + 2 * count(C) = k_1$$
+$$ \sum f(a_i) = 2 * count(B) + 2 * count(C) = k_1$$
 
-Not really what we expecte, but why ? because type C is symmetric so when we're calculating f($$a_i$$) and we placed $$ a_i $$ at Y, $$ a_j $$ at Z, $$a_k$$ at X, we'll go through the same triangle again while calculating f($$a_j$$) and placing $$ a_j $$ at Y, $$ a_i $$ at Z, $$a_k$$ at X, :-(.
+Not really what we expected, but why twice? we can have the same triangle while having a_i at X or at Y in case of type B, and at Y or at Z in case of type C.
 
 However looking at what we got again
 
 $$ count(A) + count(B) + count(C) + count(D) = k_0 $$
 
-$$ count(B) + 2 * count(C) = k_1 $$
+$$ 2 * count(B) + 2 * count(C) = k_1 $$
 
-We have two equations in four unknowns, if only we had two more equations we could try solving the system of linear equations and calculate whatever we want!.
+This makes the answer to the problem $$k_0 - k_1/2$$.
+
+But let's say we wanted to recover the count of each type on it's own, not their sum, We have two equations in four unknowns, if only we had two more equations we could try solving the system of linear equations and calculate whatever we want!.
 
 Playing in f a bit, hoping for newer equations, let's define g as
 
@@ -53,10 +55,7 @@ $$ h(k) =\lvert x : x \in a \setminus k, gcd(x, k) ≠ 1\rvert * \lvert x : x \i
 
 $$ \sum h(a_i) = count(C) + 3 * count(D) = k_3$$
 
-We then have 
-$$ (k_3 + k_2 - k_0) = 2 * count(A) + 2 * count(D) $$
-
-which is twice the value we wanted to calculate, We could also calculate the count of each type individiually if we wish by solving these equations using gaussian elimination.
+We could calculate the count of each type individiually if we wish by solving these equations using gaussian elimination.
 
 Now back to the part that we skipped which is how to calculate the cardinality of the sets we mentioned quickly.
 
