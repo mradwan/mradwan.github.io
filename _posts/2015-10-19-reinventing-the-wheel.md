@@ -155,7 +155,7 @@ Let's first write each group as a sequence of nodes, where $$S_i$$ is true if th
 |-|-|-|-|-|-|-|-|
 |is Colored?|F|F|F|T|F|F|F|
 
-Let's introduce two variables for each node, $$P_i$$ which is true if and only if the colored in the group occured before this node in the sequence, N_i which is true if this node is colored, or the colored node occurs after this node in the sequence.
+Let's introduce two variables for each node, $$P_i$$ which is true if and only if the colored in the group occurred before this node in the sequence, N_i which is true if this node is colored, or the colored node occurs after this node in the sequence.
 
 |Node|$$S_0$$|$$S_1$$|$$S_2$$|$$S_3$$|$$S_4$$|$$S_5$$|$$S_6$$|
 |-|-|-|-|-|-|-|-|
@@ -167,7 +167,7 @@ To propagate the $$S_i $$, $$P_i$$ to next nodes these clauses must be true
 
 $$(¬S_i \lor P_{i+1}) \land (¬P_{i} \lor P_{i+1}) $$
 
-To propagate the $$S_i$$, $$N_i$$ to the prev nodes these clauses must be true
+To propagate the $$S_i$$, $$N_i$$ to the previous nodes these clauses must be true
 
 $$(¬S_i \lor N_{i}) \land (¬N_{i+1} \lor N_{i}) $$
 
