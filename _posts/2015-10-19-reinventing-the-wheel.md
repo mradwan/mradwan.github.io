@@ -86,8 +86,7 @@ We can use **any** single source shortest path algorithm to solve this problem w
 
 Here's one last example that is harder than the previous ones, this problem actually encouraged me to write this whole post
 
-// TO BE CONTINUED
-<!--#### [Riddle](http://main.edu.pl/en/archive/pa/2010/zag) [Algorithmic Engagements 2010]
+#### [Riddle](http://main.edu.pl/en/archive/pa/2010/zag) [Algorithmic Engagements 2010]
 
 We have a graph, with *n* nodes and *m* and *k* groups of nodes, we want to choose a single node from each group and color it, such that each edge has at least one of it's end points colored.
 
@@ -156,42 +155,32 @@ Let's first write each group as a sequence of nodes, where $$S_i$$ is true if th
 |-|-|-|-|-|-|-|-|
 |is Colored?|F|F|F|T|F|F|F|
 
-
-We introduce one variable  *Complete* for each group, Complete is true if any node in this group is colored, and false if all nodes in this group are not colored, now we should have for each node in the group
-
-$$(S_i \lor ¬Complete)$$
-
-Complete also must be true so we should this implication
-$$(Complete \lor Complete)$$.
-
-
-We also introduce one variable for each node, $$P_i$$ which is true if and only if one of the nodes occuring before this node in the group sequence is colored.
+Let's introduce two variables for each node, $$P_i$$ which is true if and only if the colored in the group occured before this node in the sequence, N_i which is true if this node is colored, or the colored node occurs after this node in the sequence.
 
 |Node|$$S_0$$|$$S_1$$|$$S_2$$|$$S_3$$|$$S_4$$|$$S_5$$|$$S_6$$|
 |-|-|-|-|-|-|-|-|
 |is Colored?|F|F|F|T|F|F|F|
 |$$P_i$$|F|F|F|F|T|T|T|
+|$$N_i$$|T|T|T|T|F|F|F|
 
-This can be translated to 
+To propagate the $$S_i $$, $$P_i$$ to next nodes these clauses must be true
 
-$$(¬S_i \lor P_{i+1}) \land (¬P_{i} \lor P_{i+1})$$
+$$(¬S_i \lor P_{i+1}) \land (¬P_{i} \lor P_{i+1}) $$
 
-We also must not have more than one colored node in the group this can be written as
+To propagate the $$S_i$$, $$N_i$$ to the prev nodes these clauses must be true
 
-$$(¬S_i \lor ¬P_{i})$$
+$$(¬S_i \lor N_{i}) \land (¬N_{i+1} \lor N_{i}) $$
 
-Now let's see what happens when we evaluate the expression
+To prevent selecting more than one node and coloring it, we state that for each node, either the colored node is (before it in the sequence) or (at it or after it)
 
-$$(Complete \lor Complete)$$ triggers that one of $$S_i$$'s must be true
+$$ (¬P_{i+1} \lor ¬N_{i}) $$
 
-$$S_i \land (¬S_i \lor P_{i+1}) \land (¬P_{i} \lor P_{i+1})$$ triggers all $$P_{j}$$, j>i
+These clauses provided are true if and only if At most one variable is true, not really what we wanted in the first place but it turns out that we don't need more than this, since by this way we're guaranteed to color at most one node from each group, an assignment, if one group ends up with no nodes colored we can simply color any of them.
 
-$$P_{j}$$, j>i prevents other $$S_j$$, j>i from becoming true.
+I don't think that there's a way to reduce an *Exactly one from* clause to normal 2-SAT clauses, also notice that the quadratic method we used in the first solution still transforms it to an *At most one from* clause.
 
-it's good to note here that nothing directly prevents $$P_{i}$$ from begin triggered to true on it's own, however if this occured, then it would prevent a solution from being found thus it wouldn't occur.
+Now we've exchanged the *At most one from* clause to 5 normal 2-SAT clauses, which is linear, we combine those clauses with the ones from **condition 1**. clauses and feed them into **ANY** algorithm that solves the 2-SAT problem, and we'll get the answer to our problem!
 
-Now we've exchanged the *Exactly one from* clause to 5 normal 2-SAT clauses, which is linear, we combine those clauses with the ones from **condition 1**. clauses and feed them into **ANY** algorithm that solves the 2-SAT problem, and we'll get the answer to our problem!
+I've learned about this from [Looking for a Challenge book](http://www.lookingforachallengethebook.com/).
 
-I've learned about the solution to this problem from [Looking for a Challenge book](http://www.lookingforachallengethebook.com/), however my solution is a little bit different.
-
-This example shows the beauty of solving problems in the higher level where we speak in terms of problems and reductions from one problem to another, not in terms of algorithms or code.-->
+This example shows the beauty of solving problems in the higher level where we speak in terms of problems and reductions from one problem to another, not in terms of algorithms or code.
