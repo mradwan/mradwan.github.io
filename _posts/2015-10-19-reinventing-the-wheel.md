@@ -181,6 +181,6 @@ I don't think that there's a way to reduce an *Exactly one from* clause to norma
 
 Now we've exchanged the *At most one from* clause to 5 normal 2-SAT clauses, which is linear, we combine those clauses with the ones from **condition 1**. clauses and feed them into **ANY** algorithm that solves the 2-SAT problem, and we'll get the answer to our problem!
 
-I've learned about this from [Looking for a Challenge book](http://www.lookingforachallengethebook.com/).
+I've learned about this solution from [Looking for a Challenge book](http://www.lookingforachallengethebook.com/).
 
 This example shows the beauty of solving problems in the higher level where we speak in terms of problems and reductions from one problem to another, not in terms of algorithms or code.
