@@ -173,7 +173,7 @@ $$(¬S_i \lor N_{i}) \land (¬N_{i+1} \lor N_{i}) $$
 
 To prevent selecting more than one node and coloring it, we state that for each node, either the colored node is (before it in the sequence) or (at it or after it)
 
-$$ (¬P_{i+1} \lor ¬N_{i}) $$
+$$ (¬P_{i} \lor ¬N_{i}) $$
 
 These clauses provided are true if and only if At most one variable is true, not really what we wanted in the first place but it turns out that we don't need more than this, since by this way we're guaranteed to color at most one node from each group, an assignment, if one group ends up with no nodes colored we can simply color any of them.
 
